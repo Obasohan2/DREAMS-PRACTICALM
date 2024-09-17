@@ -26,6 +26,9 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    justify-content: space-between;
+    display: flex;
+    align-items: baseline;
 }
 header a{
     text-decoration: none;
@@ -53,11 +56,32 @@ h1 {
     border-bottom: 1px solid #3a3a3a;
 }
 
+/* navbar styles with dropdown toggles */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+ #nav-toggle:checked~nav {
+    display: block;
+ }
+#nav-toggle {
+    display: none;
+}
+.nave-toggle-label {
+    font-size: 2rem;
+}
 /* Main content */
 main {
     background-color: lightblue;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
+    margin-top: 90px;
 }
 
 /* Footer */
